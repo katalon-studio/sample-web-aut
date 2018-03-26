@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Demo AUT</title>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="form-container">
+                <form class="form-horizontal" id="infoForm" autocomplete="off">
+                    <div class="form-group">
+                        <label for="first-name" class="control-label col-sm-2">
+                            First name <span class="input-required"></span>
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-name" name="firstName">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name" class="control-label col-sm-2">
+                            Last name <span class="input-required"></span>
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="last-name" name="lastName">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender" class="control-label col-sm-2">Gender</label>
+                        <div class="radio-container col-sm-10">
+                            <div>
+                                <label class="radio-inline"><input type="radio" name="gender">Male</label>
+                                <label class="radio-inline"><input type="radio" name="gender">Female</label>
+                                <label class="radio-inline"><input type="radio" name="gender">In Between</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob" class="control-label col-sm-2">Date of birth</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="dob" name="dob">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" class="control-label col-sm-2">Address</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="address" name="address">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="control-label col-sm-2">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="control-label col-sm-2">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company" class="control-label col-sm-2">Company</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="company" name="company">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role" class="control-label col-sm-2">Role</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="role" id="role">
+                                <option>Developer</option>
+                                <option>QA</option>
+                                <option>Manager</option>
+                                <option>Technical Architect</option>
+                                <option>Business Analyst</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expectation" class="control-label col-sm-2">Job expectation</label>
+                        <div class="col-sm-10">
+                            <select multiple class="form-control" name="expectation" id="expectation">
+                                <option>High salary</option>
+                                <option>Nice manager/leader</option>
+                                <option>Excellent colleagues</option>
+                                <option>Good teamwork</option>
+                                <option>Chance to go onsite</option>
+                                <option>Challenging</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Ways of development</label>
+                        <div class="col-sm-10 development-ways">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Read books</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Take online courses</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Contribute to opensource projects</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Join tech cons</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Read tech blogs</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Via discovery and experiment</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment" class="control-label col-sm-2">Comment</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group"> 
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                            <span id="submit-msg" class="submit-msg submit-msg-hidden">Successfully submitted!</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

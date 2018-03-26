@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Demo AUT</title>
+    </head>
+    <body>
+        <div id="stopwatch"></div>
+        <template id="stopwatch-template">
+            <style>
+                #container {
+                    width: 500px;
+                    padding: 20px 0px;
+                    text-align: center;
+                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+                    margin: 50px auto;
+                }
+
+                #time {
+                    font-size: 3em;
+                }
+
+                .btn {
+                    background: white;
+                    color: black;
+                    border: solid 1px black;
+                    text-decoration:none;
+                    cursor:pointer;
+                    font-size:1.2em;
+                    padding: 7px 10px;
+                    width:100px;
+                    margin: 10px;
+                    outline: none;
+                    display: inline-block;
+                }
+
+                .btn:hover {
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                    background: black;
+                    border: 1px solid black;
+                    color: white;
+                    font-weight: bold;
+                }
+            </style>
+            <div id="container">
+                <div id="time"></div>
+                <button type="button" id="start" class="btn">Start</button>
+                <button type="button" id="stop" class="btn">Stop</button>
+                <button type="button" id="reset" class="btn">Reset</button>
+            </div>
+        </template>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
