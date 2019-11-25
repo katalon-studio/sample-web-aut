@@ -20,7 +20,7 @@ pipeline {
             post {
                 always {
                     withAWS(region: 'us-east-1', credentials: 'aws-docs-staging') {
-                        s3Upload(file:'dist', bucket:'katalon-test', path:'demo-aut/dist', acl:'PublicRead')
+                        s3Upload(file:'dist', bucket:'katalon-test', path:'aut', acl:'PublicRead')
                     }
                 }
             }
