@@ -6,9 +6,7 @@ pipeline {
 
         stage('Deploy staging') {
             when {
-                not {
-                    branch 'master'
-                }
+                branch 'master'
             }
             agent {
                 docker {
@@ -17,7 +15,7 @@ pipeline {
                 }
             }
             steps {
-                sh ''
+                sh 'npm install && npm run package'
             }
             post {
                 always {
