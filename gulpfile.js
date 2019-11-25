@@ -13,7 +13,10 @@ var babelify = require('babelify'),
     path = require('path'),
     runSequence = require('run-sequence'),
     buffer = require('vinyl-buffer'),
-    source = require('vinyl-source-stream');
+    source = require('vinyl-source-stream'),
+    sass = require('gulp-sass');
+ 
+sass.compiler = require('node-sass');
 
 var option = {
     dev: true
@@ -25,8 +28,9 @@ var dir = {
     nodeModules: 'node_modules'
 };
 
-gulp.task('clean', function() {
-    return del.sync(dir.dist)
+gulp.task('clean', function(cb) {
+    del.sync(dir.dist);
+    cb();
 });
 
 gulp.task('html', function() {
@@ -43,7 +47,7 @@ gulp.task('js', function() {
             entries: `${dir.src}/js/main.js`
         })
         .transform(babelify.configure({
-            presets: [ 'es2015' ]
+            presets: [ '@babel/preset-env' ]
         }))
         .bundle()
         .pipe(source('js/main.js'))
@@ -54,10 +58,8 @@ gulp.task('js', function() {
 });
 
 gulp.task('css', function() {
-    return gulp.src(`${dir.src}/**/main.less`)
-        .pipe(less({
-            paths: [ dir.nodeModules ]
-        }))
+    return gulp.src(`${dir.src}/**/main.scss`)
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(dir.dist))
         .pipe(gulpif(option.dev, connect.reload()));
 });
@@ -98,13 +100,17 @@ gulp.task('serve', function() {
     });
 });
 
-gulp.task('build', function(cb) {
-    return runSequence('clean', [ 'js', 'css', 'html' ], cb);
-});
+gulp.task('build', gulp.series('clean', 'js', 'css', 'html', function(done) {
+    done();
+}));
 
 gulp.task('package', function(cb) {
     option.dev = false;
-    return runSequence('build', 'rev', 'revreplace', cb);
+    return gulp.series('build', 'rev', 'revreplace', function(done) {
+        done();
+    })(cb);
 });
 
-gulp.task('dev', [ 'build', 'serve', 'watch' ]);
+gulp.task('dev', gulp.series('build', 'serve', 'watch', function(done) {
+    done();
+}));
