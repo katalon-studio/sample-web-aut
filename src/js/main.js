@@ -19,3 +19,4 @@ require('../js/shadow-dom.js');
 require('../js/keypress.js');
 require('../js/open-window.js');
 require('../js/delay.js');
+require('../js/alert.js');
