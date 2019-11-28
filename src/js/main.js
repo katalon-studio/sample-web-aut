@@ -21,3 +21,4 @@ require('../js/open-window.js');
 require('../js/delay.js');
 require('../js/alert.js');
 require('../js/double-click.js');
+require('../js/confirm.js');
