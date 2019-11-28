@@ -34,7 +34,8 @@
     "node-sass": "^4.13.0",
     "run-sequence": "2.2.1",
     "vinyl-buffer": "1.0.1",
-    "vinyl-source-stream": "2.0.0"
+    "vinyl-source-stream": "2.0.0",
+    "jquery-ui": "1.12.1"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js"
