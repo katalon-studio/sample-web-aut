@@ -6,7 +6,6 @@ if (window.pageId === 'double-click.html') {
   dblclickBtn.on("dblclick", (e) => {
       messageContainer.removeClass();
       messageContainer.text("You have double clicked!");
-      messageContainer.addClass("alert alert-info");
       messageContainer.show();
   });
 }
