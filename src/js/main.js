@@ -22,3 +22,4 @@ require('../js/delay.js');
 require('../js/alert.js');
 require('../js/double-click.js');
 require('../js/confirm.js');
+require('../js/hover.js');
