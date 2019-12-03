@@ -20,7 +20,7 @@ require('../js/keypress.js');
 require('../js/open-window.js');
 require('../js/delay.js');
 require('../js/alert.js');
-require('../js/double-click.js');
+require('../js/click.js');
 require('../js/confirm.js');
 require('../js/hover.js');
 require('../js/refresh.js');
