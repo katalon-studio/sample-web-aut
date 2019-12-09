@@ -1,32 +1,33 @@
 if (window.pageId === 'element-attribute-change.html') {
   console.log("1");
   var changeColorButton = $('#change-color');
-  var addColorButton = $('#add-color');
-  var removeColorButton = $('#remove-color');
+  var addImgSrcButton = $('#add-img-src');
+  var removeImgSrcButton = $('#remove-img-src');
+  var imgWithNoSource = $('#no-source-image');
+  var imgWithSource = $('#image-with-source');
 
   changeColorButton.on('click', (e) => {
     setTimeout(
       function() {
-        console.log("2");
         changeColorButton.removeClass('btn-primary').addClass('btn-success');
       },
       5000
     );
   });
 
-  addColorButton.on('click', (e) => {
+  addImgSrcButton.on('click', (e) => {
     setTimeout(
       function() {
-        addColorButton.attr('class', 'btn btn-primary');
+        imgWithNoSource.attr('src', "../image/katalon-logo.png");
       },
       5000
     );
   });
 
-  removeColorButton.on('click', (e) => {
+  removeImgSrcButton.on('click', (e) => {
     setTimeout(
       function() {
-        removeColorButton.removeAttr('class');
+        imgWithSource.removeAttr('src');
       },
       5000
     );
