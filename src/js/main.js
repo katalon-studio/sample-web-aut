@@ -24,3 +24,4 @@ require('../js/click.js');
 require('../js/confirm.js');
 require('../js/hover.js');
 require('../js/refresh.js');
+require('../js/element-attribute-change.js');
