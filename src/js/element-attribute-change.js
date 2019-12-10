@@ -1,5 +1,4 @@
 if (window.pageId === 'element-attribute-change.html') {
-  console.log("1");
   var changeColorButton = $('#change-color');
   var addImgSrcButton = $('#add-img-src');
   var removeImgSrcButton = $('#remove-img-src');
