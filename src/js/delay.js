@@ -3,6 +3,7 @@ if (window.pageId === "delay.html") {
         setTimeout(
             function() {
                 $('#container').append('<div id="waitedForElement">Hello, World!</div>');
+                $('#will-disappear').remove();
             },
             10000
         );
