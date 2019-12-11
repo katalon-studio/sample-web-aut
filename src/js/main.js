@@ -9,6 +9,7 @@ console.log(window.pageId);
 
 require('jquery');
 require('jquery-validation');
+require('jquery-mockjax')(jQuery, window);
 require('bootstrap-datepicker');
 require('../js/form.js');
 require('../js/dragdrop.js');
@@ -27,3 +28,4 @@ require('../js/refresh.js');
 require('../js/element-attribute-change.js');
 require('../js/element-clickable.js');
 require('../js/element-visibility.js');
+require('../js/jquery-async.js');
