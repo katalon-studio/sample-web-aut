@@ -29,7 +29,6 @@
     "gulp-uglify": "3.0.2",
     "gulp-watch": "5.0.1",
     "jquery": "3.4.1",
-    "jquery-ui": "1.12.1",
     "jquery-validation": "1.19.0",
     "jquery.event.drag": "2.2.2",
     "node-sass": "^4.13.0",
@@ -50,6 +49,7 @@
   },
   "dependencies": {
     "jquery-mockjax": "^2.5.0",
+    "jquery-ui-dist": "^1.12.1",
     "url-parse": "^1.4.7"
   }
 }
