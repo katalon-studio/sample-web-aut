@@ -9,6 +9,7 @@ console.log(window.pageId);
 
 require('jquery');
 require('jquery-validation');
+require('jquery-ui-dist/jquery-ui');
 require('jquery-mockjax')(jQuery, window);
 require('bootstrap-datepicker');
 require('../js/form.js');
