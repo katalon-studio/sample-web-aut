@@ -32,5 +32,5 @@ if (window.pageId === 'dragdrop.html') {
             .addClass( "ui-state-highlight" )
               .html( "Dropped!" );
         }
-      });
+    });
 }
