@@ -29,3 +29,4 @@ require('../js/element-attribute-change.js');
 require('../js/element-clickable.js');
 require('../js/element-visibility.js');
 require('../js/jquery-async.js');
+require('../js/image.js');
