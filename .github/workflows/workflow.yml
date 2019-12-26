@@ -54,4 +54,4 @@ jobs:
       run: |
         pwd
         ls -la dist/
-        aws s3 cp --recursive dist/ s3://${{ secrets.AWS_S3_BUCKET }}/aut
+        aws s3 cp --recursive dist/ s3://${{ secrets.AWS_S3_BUCKET }}/aut --acl public-read
