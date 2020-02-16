@@ -32,3 +32,4 @@ require('../js/element-visibility.js');
 require('../js/jquery-async.js');
 require('../js/image.js');
 require('../js/page-load.js');
+require('../js/type-on-image.js');

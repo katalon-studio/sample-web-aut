@@ -1,0 +1,57 @@
+name: SampleWebAUTCI
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version:
+          - 12.x
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Cache Node modules
+      uses: actions/cache@v1.0.3
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Install dependencies and build package with Node.js ${{ matrix.node-version }}
+      env:
+        CI: true
+      run: |
+        npm install
+        npm run package
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+    - name: Setup python
+      uses: actions/setup-python@v1
+      with:
+          python-version: 3.x
+          architecture: x64
+    - name: install aws 
+      run: |
+        pip3 install awscli --upgrade --user
+    - name: verify aws cli
+      run: |
+        aws --version
+    - name: Deploy to s3
+      run: |
+        pwd
+        ls -la dist/
+        aws s3 cp --recursive dist/ s3://${{ secrets.AWS_S3_BUCKET }}/aut --acl public-read
