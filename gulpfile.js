@@ -95,7 +95,7 @@ gulp.task('revreplace', function() {
 gulp.task('watch', function () {
     gulp.watch(`${dir.src}/**/*.html`, [ 'html' ]);
     gulp.watch(`${dir.src}/**/*.js`, [ 'js' ]);
-    gulp.watch(`${dir.src}/**/*.less`, [ 'css' ]);
+    gulp.watch(`${dir.src}/**/*.scss`, [ 'css' ]);
     gulp.watch(`${dir.src}/image/*`, [ 'image' ]);
 });
 

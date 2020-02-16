@@ -12,8 +12,6 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "babelify": "10.0.0",
-    "bootstrap": "4.3.1",
-    "bootstrap-datepicker": "1.9.0",
     "browserify": "16.5.0",
     "browserify-shim": "3.8.14",
     "del": "5.1.0",
@@ -28,13 +26,20 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "3.0.2",
     "gulp-watch": "5.0.1",
-    "jquery": "3.4.1",
-    "jquery-validation": "1.19.0",
-    "jquery.event.drag": "2.2.2",
     "node-sass": "^4.13.0",
     "run-sequence": "2.2.1",
     "vinyl-buffer": "1.0.1",
     "vinyl-source-stream": "2.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "bootstrap-datepicker": "1.9.0",
+    "jquery": "3.4.1",
+    "jquery-validation": "1.19.0",
+    "jquery-mockjax": "^2.5.0",
+    "jquery-ui-dist": "^1.12.1",
+    "jquery.event.drag": "2.2.2",
+    "url-parse": "^1.4.7"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js"
@@ -46,10 +51,5 @@
     "transform": [
       "browserify-shim"
     ]
-  },
-  "dependencies": {
-    "jquery-mockjax": "^2.5.0",
-    "jquery-ui-dist": "^1.12.1",
-    "url-parse": "^1.4.7"
   }
 }
