@@ -39,7 +39,7 @@
     "jquery-mockjax": "^2.5.0",
     "jquery-ui-dist": "^1.12.1",
     "jquery.event.drag": "2.2.2",
-    "url-parse": "^1.4.7"
+    "url-parse": "^1.5.9"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js"
